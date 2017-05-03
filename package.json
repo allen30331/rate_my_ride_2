@@ -1,0 +1,31 @@
+{
+  "name": "rate-my-ride",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.16.0",
+    "connect-mongo": "^1.3.2",
+    "connect-mongoose": "0.0.2",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "faker": "^3.1.0",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.8.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0"
+  }
+}

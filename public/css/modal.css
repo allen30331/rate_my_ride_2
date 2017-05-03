@@ -1,0 +1,14 @@
+.modal-container {
+	position: fixed;
+	background-color: white;
+	border: 1px solid black;
+	left: 50%;
+}
+
+.modal-container a {
+	color: black;
+}
+
+.modal {
+	display: none;
+}
