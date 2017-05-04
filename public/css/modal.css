@@ -3,6 +3,7 @@
 	background-color: white;
 	border: 1px solid black;
 	left: 50%;
+	transform: translateX(-50%);
 }
 
 .modal-container a {
