@@ -44,6 +44,9 @@ app.get('/practice', function(req,res) {
   res.sendFile(__dirname + '/public/views/practice.html');
 });
 
+app.get('/review-driver', function(req,res) {
+  res.sendFile(__dirname + '/public/views/review.driver.html');
+});
 
 //Static endpoints end//
 
