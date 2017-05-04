@@ -36,9 +36,14 @@ app.get('/demo', function(req,res) {
   res.sendFile(__dirname + '/public/views/demo.html');
 });
 
-app.get('/not-found', function(req,res) {
-  res.sendFile(__dirname + '/public/views/not-found.html');
+app.get('/results', function(req,res) {
+  res.sendFile(__dirname + '/public/views/results.html');
 });
+
+app.get('/practice', function(req,res) {
+  res.sendFile(__dirname + '/public/views/practice.html');
+});
+
 
 //Static endpoints end//
 
@@ -48,8 +53,8 @@ app.use('/drivers', driversRouter);
 
 
 app.use('*', function(req, res) {
-   res.send('what???', 500);
-  //res.status(404).json({message: 'Not Found'});
+   //res.send('error', 500);
+  res.status(404).json({message: 'Not Found'});
 });
 
 
