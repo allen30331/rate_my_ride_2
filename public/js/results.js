@@ -1,6 +1,11 @@
-const driverTagNumber = localStorage.getItem("query");
+let driverTagNumber = localStorage.getItem("query");
 
-//console.log(searchTerm, 'these are the results');
+
+$('form').submit(function() {
+	let tagNumber = $('form').find('.search-field').val();
+	let myStorage = localStorage.setItem("query", tagNumber);
+});
+
 
 
 /////Gets driver bby the drivers tag number/////
