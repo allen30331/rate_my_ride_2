@@ -53,7 +53,7 @@ function renderData(data) {
 			`<div class="row">
 				<div class="col-12">
 					<h1>${data.driverName}</h1>
-					<a href="../views/review-driver.html" class="review-driver-button">Review Driver</a>
+					<a href="/review-driver" class="review-driver-button">Review Driver</a>
 					<h3>${data.company}</h3>
 					<h3>tag number: ${data.tagNumber}</h3>
 					<h3>city: ${data.city}</h3>
