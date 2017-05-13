@@ -1,9 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rate My Ride | Uber and Lyft Reviews</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/css-main.css">
+	<link rel="stylesheet" type="text/css" href="../css/float-grid.css">
+	<link rel="stylesheet" type="text/css" href="../css/modal.css">
 </head>
 <body>
-<p>Review Driver</p>
+	<header>
+		<div class="row">
+			<div class="col-4">
+				<h1 class='logo'><a href='/'>rate my ride</a></h1>
+				<div class="uber-lyft">
+					<h4>Uber &amp; Lyft Reviews</h4>
+				</div>
+			</div>
+		</div>
+
+
+	</header>
+
+	<div class="row">
+		<div class="col-12">
+			<form class="search-form" action="/results" method="get" autocomplete="off">
+				<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
+				<button type='submit' class="search-button">search</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+	    	<form class="review-driver" action="/drivers/id/reviews" method="post" id="review-form">
+	    		<p>Rating</p> <select name="rating" form="rating-choice" id="driverRating">
+	    	          <option value="1">1</option>
+	    	          <option value="2">2</option>
+	    	          <option value="3">3</option>
+	    	          <option value="4">4</option>
+	    	          <option value="5">5</option>
+	    	          </select><br>
+	    	  	<p>Description</p> <select name="description" form="description-choice" id="description">
+	    	          <option value="Great">Great</option>
+	    	          <option value="Good">Good</option>
+	    	          <option value="Bad">Bad</option>
+	    	          <option value="Nuetral">Nuetral</option>
+	    	          <option value="Creepy">Creepy</option>
+	    	          </select><br>
+
+	    	  	<p>Comment</p> <textarea cols="50" rows="4" name="comment" id="comment" required></textarea><br>
+	    	</form>
+	    	<button type='submit' class="submit-driver-review-button" id="review-form">submit
+	    	</button>
+	    	<button class="cancel-button"><a href="index.html">cancel</a></button>      
+	    </div>
+    </div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/review-driver.js"></script>
 </body>
 </html>

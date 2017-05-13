@@ -1,3 +1,5 @@
+let driverId;
+
 let driverTagNumber = localStorage.getItem("query");
 
 
@@ -43,7 +45,9 @@ function renderData(data) {
 
   	let year = now.getFullYear();
 
+  	driverId = data.id;
 
+  	driverId = localStorage.setItem("driverId", driverId);
 
 	if (data.status === 500) {
 		$('.modal').show();
