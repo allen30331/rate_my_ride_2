@@ -32,3 +32,16 @@ function createReview(driverRating, description, comment, callback) {
 });
 }
 /////Creates Ajax request to create review end/////
+
+
+function alert() {
+	console.log('added review');
+}
+
+
+function executeCreateReview() {
+	let driverRating = $('#review-form').find('#driverRating').val();
+	let description = $('#review-form').find('#description').val();
+	let comment = $('#review-form').find('#comment').val();
+	createReview(driverRating, description, comment, alert);
+}
