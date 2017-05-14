@@ -13,7 +13,7 @@ $('form').submit(function() {
 /////Gets driver by the drivers tag number/////
 function getDriver(driverTagNumber, callbackFn) {
   $.ajax({
-    url: `/drivers/${driverTagNumber}/tagNumber`,  //http://localhost:8080
+    url: `/drivers/${driverTagNumber}/tagNumber`,  
     type: 'GET',
     dataType: 'json',
 
@@ -21,6 +21,7 @@ function getDriver(driverTagNumber, callbackFn) {
     if(data) {
       driverId = data.id;
       driverName = data.driverName;
+      localDriverId = localStorage.setItem("driverId", driverId);
       callbackFn(data);
     }
   },
@@ -45,9 +46,6 @@ function renderData(data) {
 
   	let year = now.getFullYear();
 
-  	driverId = data.id;
-
-  	driverId = localStorage.setItem("driverId", driverId);
 
 	if (data.status === 500) {
 		$('.modal').show();
