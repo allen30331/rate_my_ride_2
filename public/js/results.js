@@ -3,10 +3,10 @@ let driverId;
 let driverTagNumber = localStorage.getItem("query");
 
 
-$('form').submit(function() {
-	let tagNumber = $('form').find('.search-field').val();
-	let myStorage = localStorage.setItem("query", tagNumber);
-});
+// $('form').submit(function() {
+// 	let tagNumber = $('form').find('.search-field').val();
+// 	let myStorage = localStorage.setItem("query", tagNumber);
+// });
 
 
 
