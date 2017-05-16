@@ -4,15 +4,17 @@
 	<title></title>
 </head>
 <body>
-	<form action="/results" method="get">
-		<input type="text" name="tag" class="search" required> 
-		<button type="submit" class="search-button">Submit</button>
+	<form class="search-form" action="/results" method="get" autocomplete="off" onsubmit="searchForDriver()">
+		<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
+		<button type='submit' class="search-button">search</button>
 	</form>
 
-<button onclick="greet()">click</button>
+
 	
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="../js/practice.js"></script>
+<!-- <script type="text/javascript" src="../js/practice.js"></script> -->
+<!-- <script type="text/javascript" src="../../bundle.js"></script> -->
+<script type="text/javascript" src="../js/search.js"></script>
 </body>
 </html>

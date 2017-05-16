@@ -3,17 +3,11 @@ $('form').submit(function() {
 	let myStorage = localStorage.setItem("query", tagNumber);
 });
 
-
-function greet() {
-	alert('hello');
-}
-
-//module.exports = greet;
+// function greet() {
+// 	alert('hello');
+// }
 
 
-
-
-
-
+// module.exports = greet;
 
 
