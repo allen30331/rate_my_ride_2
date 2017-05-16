@@ -1,13 +1,8 @@
-$('form').submit(function() {
-	let tagNumber = $('form').find('.search-field').val();
-	let myStorage = localStorage.setItem("query", tagNumber);
-});
-
-// function greet() {
-// 	alert('hello');
-// }
+// $('form').submit(function() {
+// 	let tagNumber = $('form').find('.search-field').val();
+// 	let myStorage = localStorage.setItem("query", tagNumber);
+// });
 
 
-// module.exports = greet;
 
 

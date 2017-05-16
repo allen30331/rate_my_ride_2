@@ -23,17 +23,18 @@
 		</div>
 	</header>
 
-
-	<main>
-		<div class="row">
-			<div class="col-12">
-				<form class="search-form" action="/results" method="get" autocomplete="off">
-					<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
-					<button type='submit' class="search-button">search</button>
-				</form>
+	<div class="container">
+		<main>
+			<div class="row">
+				<div class="col-12">
+					<form class="search-form" action="/results" method="get" autocomplete="off" onsubmit="searchForDriver()">
+						<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
+						<button type='submit' class="search-button">search</button>
+					</form>
+				</div>
 			</div>
-		</div>
-	</main>
+		</main>
+	</div>
 
 
 
@@ -50,6 +51,7 @@
 
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>
+	<!-- <script type="text/javascript" src="../js/index.js"></script> -->
+	<script type="text/javascript" src="../js/search.js"></script>
 </body>
 </html>
