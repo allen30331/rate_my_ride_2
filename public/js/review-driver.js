@@ -44,6 +44,7 @@ function displayReviewAddedMessage() {
                     </div>
                  </div>`
                  );
+  setTimeout(function() {window.location.assign('/');}, 2000);
 }
 
 
