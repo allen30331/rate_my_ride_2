@@ -84,6 +84,7 @@ function renderData(data) {
 
 
 (function executeSearch() {
+	console.log(driverTagNumber, 'helllooooo');
 	getDriver(driverTagNumber, renderData);
 })();
 
