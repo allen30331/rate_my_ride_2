@@ -38,7 +38,7 @@ function renderData(data) {
     $('.modal').show();
   }
   else {
-    $('.driver-results').append(
+    $('.container').append(
       `<div class="row">
         <div class="col-12">
           <h1>${data.driverName}</h1>
@@ -54,7 +54,7 @@ function renderData(data) {
 
 
     for (key in data.descriptionSummary) {
-        $('.driver-results').append(
+        $('.container').append(
           `<div class="row">
               <div class="col-12">
                 <h3>${key}: ${data.descriptionSummary[key]}</h3>
@@ -64,7 +64,7 @@ function renderData(data) {
 
 
       data.reviews.forEach(function (review) {
-        $('.driver-results').append(
+        $('.container').append(
             `<div class="row">
                 <div class="col-12">
                   <p>rating: ${review.driverRating}</p>

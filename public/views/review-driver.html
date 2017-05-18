@@ -20,42 +20,42 @@
 				</div>
 			</div>
 		</div>
-
-
 	</header>
 
-	<div class="row">
-		<div class="col-12">
-			<form class="search-form" action="/results" method="get" autocomplete="off">
-				<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
-				<button type='submit' class="search-button">search</button>
-			</form>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<form class="search-form" action="/results" method="get" autocomplete="off">
+					<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
+					<button type='submit' class="search-button">search</button>
+				</form>
+			</div>
 		</div>
-	</div>
 
-	<div class="row">
-		<div class="col-12">
-	    	<form class="review-driver" action="/drivers/id/reviews" method="post" id="review-form">
-	    		<p>Rating</p> <select name="rating" form="rating-choice" id="driverRating">
-	    	          <option value="1">1</option>
-	    	          <option value="2">2</option>
-	    	          <option value="3">3</option>
-	    	          <option value="4">4</option>
-	    	          <option value="5">5</option>
-	    	          </select><br>
-	    	  	<p>Description</p> <select name="description" form="description-choice" id="description">
-	    	          <option value="Great">Great</option>
-	    	          <option value="Good">Good</option>
-	    	          <option value="Bad">Bad</option>
-	    	          <option value="Nuetral">Nuetral</option>
-	    	          <option value="Creepy">Creepy</option>
-	    	          </select><br>
+		<div class="row">
+			<div class="col-12">
+		    	<form class="review-driver" action="/drivers/id/reviews" method="post" id="review-form">
+		    		<p>Rating</p> <select name="rating" form="rating-choice" id="driverRating">
+		    	          <option value="1">1</option>
+		    	          <option value="2">2</option>
+		    	          <option value="3">3</option>
+		    	          <option value="4">4</option>
+		    	          <option value="5">5</option>
+		    	          </select><br>
+		    	  	<p>Description</p> <select name="description" form="description-choice" id="description">
+		    	          <option value="Great">Great</option>
+		    	          <option value="Good">Good</option>
+		    	          <option value="Bad">Bad</option>
+		    	          <option value="Nuetral">Nuetral</option>
+		    	          <option value="Creepy">Creepy</option>
+		    	          </select><br>
 
-	    	  	<p>Comment</p> <textarea cols="50" rows="4" name="comment" id="comment" required></textarea><br>
-	    	</form>
-	    	<button type='submit' class="submit-driver-review-button" id="review-form" onclick="executeCreateReview()">submit
-	    	</button>
-	    	<button class="cancel-button"><a href="/">cancel</a></button>      
+		    	  	<p>Comment</p> <textarea cols="50" rows="4" name="comment" id="comment" required></textarea><br>
+		    	</form>
+		    	<button type='submit' class="submit-driver-review-button" id="review-form" onclick="executeCreateReview()">submit
+		    	</button>
+		    	<button class="cancel-button"><a href="/">cancel</a></button>      
+		    </div>
 	    </div>
     </div>
 

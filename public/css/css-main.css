@@ -2,6 +2,15 @@
 	font-family: Roboto;
 }
 
+/*html, body {
+    height: 100%;
+}*/
+
+.container {
+    border: 1px solid black;
+    height: 100%;
+}
+
 header {
     background-color: #00B9E2;
 }
@@ -280,7 +289,7 @@ button#review-form:hover {
 
 footer  {
     background-color: #00B9E2;
-    margin-top: 60px;
+    /*margin-top: 60px;*/
 }
 
 footer p {

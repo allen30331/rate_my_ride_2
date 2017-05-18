@@ -1,5 +1,14 @@
 const mongoose = require('mongoose');
 
+  let now = new Date();
+  
+  let day = now.getDate();
+
+  let month = now.getMonth();
+
+  let year = now.getFullYear();
+
+
 const driverSchema = mongoose.Schema({
   driverName: {type: String, required: true},
   company: {type: String, required: true},

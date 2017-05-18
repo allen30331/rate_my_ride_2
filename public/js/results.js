@@ -1,12 +1,8 @@
 let driverId;
 
+let driverName;
+
 let driverTagNumber = localStorage.getItem("query");
-
-
-// $('form').submit(function() {
-// 	let tagNumber = $('form').find('.search-field').val();
-// 	let myStorage = localStorage.setItem("query", tagNumber);
-// });
 
 
 
@@ -21,6 +17,7 @@ function getDriver(driverTagNumber, callbackFn) {
     if(data) {
       driverId = data.id;
       driverName = data.driverName;
+      localDriverName = localStorage.setItem("driverName", driverName);
       localDriverId = localStorage.setItem("driverId", driverId);
       callbackFn(data);
     }
@@ -36,17 +33,7 @@ function getDriver(driverTagNumber, callbackFn) {
 
 
 
-function renderData(data) {
-	
-	let now = new Date();
-  
-	let day = now.getDate();
-
-  	let month = now.getMonth();
-
-  	let year = now.getFullYear();
-
-
+function renderData(data) {	
 	if (data.status === 500) {
 		$('.modal').show();
 	}
@@ -77,13 +64,14 @@ function renderData(data) {
 
 
 	    data.reviews.forEach(function (review) {
+	    	let date = new Date(review.created);
 		    $('.driver-results').append(
 	          `<div class="row">
 		          	<div class="col-12">
 		          		<p>rating: ${review.driverRating}</p>
 		          		<p>description: ${review.description}</p>
 		          		<p>comment: ${review.comment}</p>
-		          		<p>created: ${month}/${day}/${year}</p>
+		          		<p>created: ${date.toDateString()}</p>
 		          		<div class="border"></div>
 		          	</div>
 	          </div>`
