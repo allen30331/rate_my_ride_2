@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/modal.css">
 </head>
 <body>
+
 	<header>
 		<div class="row">
 			<div class="col-4">
@@ -22,20 +23,19 @@
 		</div>
 	</header>
 
+
+	<div class="row">
+		<div class="col-12">
+			<form class="search-form" action="/results" method="get" autocomplete="off" onsubmit="searchForDriver()">
+				<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
+				<button type='submit' class="search-button">search</button>
+			</form>
+		</div>
+	</div>
+
+
 	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<form class="search-form" action="/results" method="get" autocomplete="off" onsubmit="searchForDriver()">
-					<input type="text" name="search-field" class="search-field" placeholder="enter tag number" required/>
-					<button type='submit' class="search-button">search</button>
-				</form>
-			</div>
 
-		</div>
-
-		<div class="driver-results">
-			
-		</div>
 
 		<div class="modal">
 			<div class="modal-container">
@@ -44,6 +44,7 @@
 				<a href="/">Cancel</a>
 			</div>
 		</div>
+		
 	</div>
 
 

@@ -8,7 +8,7 @@ console.log(driverId);
 /////Creates Ajax request to create review begin/////
 function createReview(driverRating, description, comment, callback) {
   $.ajax({
-    url: `/drivers/${driverId}/reviews`,  //http://localhost:8080
+    url: `/drivers/${driverId}/reviews`,  
     type: 'POST',
     dataType: 'json',
     contentType: 'application/json',

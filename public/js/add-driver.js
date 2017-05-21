@@ -52,10 +52,19 @@ function createDriver(driverName, company, tagNumber, city, driverRating, descri
 
 
 
-
-function replaceAddDriverHeading() {
-  alert('complete');
+function displayDriverAddedMessage() {
+  $('.container').html(
+                 `<div class="row">
+                    <div class="col-12">
+                      <p>Thanks for adding ${driverName}!</p>
+                    </div>
+                 </div>`
+                 );
+  setTimeout(function() {window.location.assign('/');}, 2000);
 }
+
+
+
 
 
 function submitDriver() {
@@ -68,23 +77,9 @@ function submitDriver() {
   let driverRating = parseInt(stringDriverRating);
   let description = $('.add-driver').find('#description').val();
   let comment = $('.add-driver').find('#comment').val();
-  createDriver(driverName, company, tagNumber, city, driverRating, description, comment, replaceAddDriverHeading);
+  createDriver(driverName, company, tagNumber, city, driverRating, description, comment, displayDriverAddedMessage);
 }
 
 
-/////Event listener for submit button for add driver form begin/////
-// $(".add-driver").submit(function(event) {
-//   event.preventDefault();
-//   driverName = $('.add-driver').find('#driver-name').val();
-//   let company = $('.add-driver').find('#company').val();
-//   let tagNumber = $('.add-driver').find('#tagNumber').val();
-//   let city = $('.add-driver').find('#city').val();
-//   let stringDriverRating = $('.add-driver').find('#driverRating').val();
-//   let driverRating = parseInt(stringDriverRating);
-//   let description = $('.add-driver').find('#description').val();
-//   let comment = $('.add-driver').find('#comment').val();
-//   createDriver(driverName, company, tagNumber, city, driverRating, description, comment, replaceAddDriverHeading);
-// });
-/////Event listener for submit button for add driver form end/////
 
 
